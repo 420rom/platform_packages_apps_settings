@@ -31,11 +31,6 @@
         android:title="@string/volume_adjustment_category_title"
         android:order="100">
 
-   <Preference
-        android:key="sound_animation"
-        android:layout="@layout/sound_animation" 
-        android:order="-999"/>
-
     <!-- Remote volume group -->
     <PreferenceCategory
         android:key="remote_media_group"
