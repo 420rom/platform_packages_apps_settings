@@ -24,8 +24,7 @@
     <Preference
         android:key="logo"
         android:order="-500"
-        android:enabled="false"
-        android:layout="@layout/logo" />
+        android:layout="@layout/system_animation" />
 
     <Preference
         android:key="language_input_settings"

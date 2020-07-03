@@ -30,6 +30,10 @@
         android:key="screen_category"
         android:title="@string/display_screen_category">
 
+   <Preference
+        android:key="display_animation"
+        android:layout="@layout/display_animation" />
+
     <com.android.settingslib.RestrictedPreference
         android:key="brightness"
         android:icon="@drawable/ic_settings_adaptive_brightness"
