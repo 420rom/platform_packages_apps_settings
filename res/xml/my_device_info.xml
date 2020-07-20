@@ -28,6 +28,13 @@
         android:selectable="false"
         settings:isPreferenceVisible="false"/>
 
+    <!-- 420rom logo -->
+    <Preference
+        android:key="logo"
+        android:order="0"
+        android:enabled="false"
+        android:layout="@layout/logo" />
+
     <!-- Device name -->
     <com.android.settings.widget.ValidatedEditTextPreference
         android:key="device_name"
@@ -37,6 +44,67 @@
         settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
         settings:enableCopying="true"/>
 
+    <!-- Model & hardware -->
+    <Preference
+        android:key="device_model"
+        android:order="2"
+        android:title="@string/hardware_info"
+        settings:keywords="@string/keywords_model_and_hardware"
+        android:summary="@string/summary_placeholder"
+        android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
+        settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"/>
+		
+    <!-- 420rom version -->
+    <Preference
+        android:key="420rom_version"
+        android:order="3"
+        android:title="@string/420rom_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"/>
+		
+    <!-- AOSP version -->
+    <Preference
+        android:key="aosp_version"
+        android:order="4"
+        android:title="@string/aosp_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"/>
+
+    <!-- Rom type -->
+    <Preference
+        android:key="rom_type"
+        android:order="5"
+        android:title="@string/rom_type"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"/>
+
+    <!-- Rom devs -->
+    <Preference
+        android:key="rom_devs"
+        android:order="6"
+        android:title="@string/rom_devs"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"/>
+		
+    <!-- Android version -->
+    <Preference
+        android:key="firmware_version"
+        android:order="42"
+        android:title="@string/firmware_version"
+        android:summary="@string/summary_placeholder"
+        android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
+
+    <!-- Build number -->
+    <Preference
+        android:key="build_number"
+        android:order="53"
+        android:title="@string/build_number"
+        android:summary="@string/summary_placeholder"
+        settings:allowDividerAbove="true"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
+	
     <!-- Account name -->
     <Preference
         android:key="branded_account"
@@ -62,31 +130,6 @@
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.accounts.EmergencyInfoPreferenceController"/>
 
-    <!-- Legal information -->
-    <Preference
-        android:key="legal_container"
-        android:order="15"
-        android:title="@string/legal_information"
-        android:fragment="com.android.settings.LegalSettings"
-        settings:allowDividerAbove="true"
-        settings:searchable="false"/>
-
-    <!-- Regulatory labels -->
-    <Preference
-        android:key="regulatory_info"
-        android:order="16"
-        android:title="@string/regulatory_labels">
-        <intent android:action="android.settings.SHOW_REGULATORY_INFO"/>
-    </Preference>
-
-    <!-- Safety & regulatory manual -->
-    <Preference
-        android:key="safety_info"
-        android:order="17"
-        android:title="@string/safety_and_regulatory_info">
-        <intent android:action="android.settings.SHOW_SAFETY_AND_REGULATORY_INFO"/>
-    </Preference>
-
     <!-- SIM status -->
     <Preference
         android:key="sim_status"
@@ -96,16 +139,6 @@
         android:summary="@string/summary_placeholder"
         settings:allowDividerAbove="true"/>
 
-    <!-- Model & hardware -->
-    <Preference
-        android:key="device_model"
-        android:order="31"
-        android:title="@string/hardware_info"
-        settings:keywords="@string/keywords_model_and_hardware"
-        android:summary="@string/summary_placeholder"
-        android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
-        settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"/>
-
     <!-- IMEI -->
     <Preference
         android:key="imei_info"
@@ -114,15 +147,6 @@
         settings:keywords="@string/keywords_imei_info"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.deviceinfo.imei.ImeiInfoPreferenceController"/>
-
-    <!-- Android version -->
-    <Preference
-        android:key="firmware_version"
-        android:order="42"
-        android:title="@string/firmware_version"
-        android:summary="@string/summary_placeholder"
-        android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
 
     <!--IP address -->
     <Preference
@@ -152,29 +176,6 @@
         android:selectable="false"
         settings:enableCopying="true"/>
 
-    <!-- Device up time -->
-    <Preference
-        android:key="up_time"
-        android:order="47"
-        android:title="@string/status_up_time"
-        android:summary="@string/summary_placeholder"
-        android:selectable="false"/>
-
-    <!-- Manual -->
-    <Preference
-        android:key="manual"
-        android:order="50"
-        android:title="@string/manual">
-        <intent android:action="android.settings.SHOW_MANUAL"/>
-    </Preference>
-
-    <!-- Feedback on the device -->
-    <Preference
-        android:key="device_feedback"
-        android:order="51"
-        android:title="@string/device_feedback"
-        settings:keywords="@string/keywords_device_feedback"/>
-
     <!-- Device FCC equipment id -->
     <Preference
         android:key="fcc_equipment_id"
@@ -182,14 +183,20 @@
         android:title="@string/fcc_equipment_id"
         android:summary="@string/summary_placeholder"/>
 
-    <!-- Build number -->
+    <!-- Device up time -->
     <Preference
-        android:key="build_number"
-        android:order="53"
-        android:title="@string/build_number"
+        android:key="up_time"
+        android:order="47"
+        android:title="@string/status_up_time"
         android:summary="@string/summary_placeholder"
-        settings:allowDividerAbove="true"
-        settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
-
+        android:selectable="false"/>
+		
+    <!-- SELinux -->
+    <Preference
+        android:key="selinux_status"
+        android:title="@string/selinux_status"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="false"
+        android:selectable="false"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.SelinuxStatusPreferenceController"/>
 </PreferenceScreen>
