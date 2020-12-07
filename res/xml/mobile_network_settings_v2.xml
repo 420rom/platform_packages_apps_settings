@@ -20,7 +20,6 @@
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="use_sim_switch"
-        android:title="@string/summary_placeholder"
         android:layout="@layout/styled_switch_bar"
         settings:controller="com.android.settings.network.telephony.MobileNetworkSwitchController"/>
 
@@ -33,7 +32,7 @@
         <com.android.settings.datausage.DataUsageSummaryPreference
             android:key="status_header"
             android:visibility="gone"
-            android:selectable="false"/>
+            android:selectable="false" />
 
         <ListPreference
             android:key="calls_preference"
@@ -96,31 +95,7 @@
             android:title="@string/enhanced_4g_lte_mode_title"
             android:persistent="false"
             android:summary="@string/enhanced_4g_lte_mode_summary"
-            settings:keywords="@string/keywords_enhance_4g_lte"
             settings:controller="com.android.settings.network.telephony.Enhanced4gLtePreferenceController"/>
-
-        <SwitchPreference
-            android:key="4g_calling"
-            android:title="@string/enhanced_4g_lte_mode_title_4g_calling"
-            android:persistent="false"
-            android:summary="@string/enhanced_4g_lte_mode_summary_4g_calling"
-            settings:keywords="@string/keywords_enhance_4g_lte"
-            settings:controller="com.android.settings.network.telephony.Enhanced4gCallingPreferenceController"/>
-
-        <SwitchPreference
-            android:key="advance_call"
-            android:title="@string/enhanced_4g_lte_mode_title_advanced_calling"
-            android:persistent="false"
-            android:summary="@string/enhanced_4g_lte_mode_summary"
-            settings:keywords="@string/keywords_enhance_4g_lte"
-            settings:controller="com.android.settings.network.telephony.Enhanced4gAdvancedCallingPreferenceController"/>
-
-        <SwitchPreference
-            android:key="contact_discovery_opt_in"
-            android:title="@string/contact_discovery_opt_in_title"
-            android:persistent="false"
-            android:summary="@string/contact_discovery_opt_in_summary"
-            settings:controller="com.android.settings.network.telephony.ContactDiscoveryPreferenceController"/>
 
         <ListPreference
             android:key="preferred_network_mode_key"
@@ -143,19 +118,15 @@
         <Preference
             android:key="carrier_settings_version_key"
             android:title="@string/carrier_settings_version"
-            android:enabled="false"
-            android:shouldDisableView="false"
-            android:selectable="false"
             settings:controller="com.android.settings.network.telephony.CarrierSettingsVersionPreferenceController"
             settings:enableCopying="true"/>
 
         <PreferenceCategory
             android:key="calling_category"
-            android:title="@string/call_category"
-            settings:controller="com.android.settings.network.telephony.CallingPreferenceCategoryController">
+            android:title="@string/call_category">
 
             <PreferenceScreen
-                android:key="wifi_calling"
+                android:key="wifi_calling_key"
                 android:title="@string/wifi_calling_settings_title"
                 android:summary="@string/wifi_calling_summary"
                 settings:controller="com.android.settings.network.telephony.WifiCallingPreferenceController">
@@ -195,7 +166,7 @@
         <PreferenceCategory
             android:key="network_operators_category_key"
             android:title="@string/network_operator_category"
-            settings:controller="com.android.settings.network.telephony.NetworkPreferenceCategoryController">
+            settings:controller="com.android.settings.widget.PreferenceCategoryController">
 
             <SwitchPreference
                 android:key="auto_select_key"
@@ -229,23 +200,16 @@
         android:key="erase_sim"
         android:persistent="false"
         android:title="@string/mobile_network_erase_sim"
-        settings:allowDividerBelow="true"
-        settings:controller="com.android.settings.network.telephony.DeleteSimProfilePreferenceController"/>
+        settings:controller="com.android.settings.network.telephony.DeleteSimProfilePreferenceController" />
 
-    <com.android.settingslib.widget.FooterPreference
-        android:key="disable_sim_explanation"
-        android:title="@string/mobile_network_disable_sim_explanation"
-        android:selectable="false"
-        settings:allowDividerAbove="true"
-        settings:searchable="false"
-        settings:controller="com.android.settings.network.telephony.DisableSimFooterPreferenceController"/>
-
-    <com.android.settingslib.widget.FooterPreference
-        android:key="no_5g_in_dsds_explanation"
-        android:title="@string/no_5g_in_dsds_text"
-        android:selectable="false"
-        settings:allowDividerAbove="true"
-        settings:searchable="false"
-        settings:controller="com.android.settings.network.telephony.NrDisabledInDsdsFooterPreferenceController"/>
+    <PreferenceCategory
+        android:key="footer_container"
+        android:title="@string/summary_placeholder"
+        android:layout="@layout/preference_category_no_label"
+        settings:controller="com.android.settings.network.telephony.DisableSimFooterPreferenceController">
+        <com.android.settingslib.widget.FooterPreference
+            android:key="disable_sim_explanation"
+            android:title="@string/mobile_network_disable_sim_explanation" />
+    </PreferenceCategory>
 
 </PreferenceScreen>
