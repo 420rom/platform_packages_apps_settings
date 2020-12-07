@@ -19,19 +19,19 @@
     <string name="420rom_name">Rom name</string>
     <string name="420rom_version_default">420rom</string>
     <string name="420rom_version">420rom version</string>
-    <string name="420rom_version_default">5.0 Pixel Edition</string>
+    <string name="420rom_version_default">11.0 Pixel Edition</string>
     <string name="420rom_about_nfo">About 420rom</string>
     <string name="420rom_about_info_summary_title">about us</string>
     <string name="420rom_info_summary">420rom AOSP/Pixel based rom.</string>
 
     <!-- About phone screen, AOSP version -->  
     <string name="aosp_version">Rom base</string>
-    <string name="aosp_version_default">10.0.0 Release 40 (QQ3A.200705.002)</string>
+    <string name="aosp_version_default">11.0.0 Release 17 (RP1A.201105.002)</string>
     <string name="keywords_aosp_version">AOSP base</string>
 
     <!-- About phone screen, Rom type -->  
     <string name="rom_type">Rom type</string>
-    <string name="rom_type_default">ARM64 A-Only GSI</string>
+    <string name="rom_type_default">ARM64 with Google apps</string>
 	
     <!-- About phone screen, Developers --> 	
     <string name="rom_devs">Rom developers</string>	
