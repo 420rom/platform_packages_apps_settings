@@ -172,5 +172,5 @@
         android:title="@string/confirm_sim_deletion_title"
         android:summary="@string/confirm_sim_deletion_description"
         settings:controller="com.android.settings.security.ConfirmSimDeletionPreferenceController"/>
-
+    </PreferenceCategory>
 </PreferenceScreen>
