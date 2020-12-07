@@ -28,30 +28,19 @@
         android:enabled="false"
         android:layout="@layout/logo" />
 
-    <!-- Device name -->
-    <com.android.settings.widget.ValidatedEditTextPreference
-        android:key="device_name"
-        android:order="1"
-        android:title="@string/my_device_info_device_name_preference_title"
+    <!-- 420rom name -->
+    <Preference
+        android:key="_420rom_name"
+        android:order="3"
+        android:title="@string/_420rom_name"
         android:summary="@string/summary_placeholder"
-        settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
         settings:enableCopying="true"/>
 
-    <!-- Model & hardware -->
-    <Preference
-        android:key="device_model"
-        android:order="2"
-        android:title="@string/hardware_info"
-        settings:keywords="@string/keywords_model_and_hardware"
-        android:summary="@string/summary_placeholder"
-        android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
-        settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"/>
-		
     <!-- 420rom version -->
     <Preference
-        android:key="420rom_version"
+        android:key="_420rom_version"
         android:order="3"
-        android:title="@string/420rom_version"
+        android:title="@string/_420rom_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"/>
 		
@@ -78,7 +67,15 @@
         android:title="@string/rom_devs"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"/>
-		
+
+    <!-- About rom -->
+    <Preference
+        android:key="_420rom_about"
+        android:order="6"
+        android:title="@string/_420rom_about"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"/>		
+
     <!-- Android version -->
     <Preference
         android:key="firmware_version"
@@ -97,6 +94,25 @@
         settings:allowDividerAbove="true"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
+
+    <!-- Device name -->
+    <com.android.settings.widget.ValidatedEditTextPreference
+        android:key="device_name"
+        android:order="1"
+        android:title="@string/my_device_info_device_name_preference_title"
+        android:summary="@string/summary_placeholder"
+        settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
+        settings:enableCopying="true"/>
+
+    <!-- Model & hardware -->
+    <Preference
+        android:key="device_model"
+        android:order="2"
+        android:title="@string/hardware_info"
+        settings:keywords="@string/keywords_model_and_hardware"
+        android:summary="@string/summary_placeholder"
+        android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
+        settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"/>
 	
     <!-- Account name -->
     <Preference
@@ -129,9 +145,9 @@
         android:order="15"
         android:title="@string/legal_information"
         android:fragment="com.android.settings.LegalSettings"
-        settings:allowDividerAbove="true"/> -->
+        settings:allowDividerAbove="true"/>
 
-    <!-- Regulatory labels -->
+    Regulatory labels
     <Preference
         android:key="regulatory_info"
         android:order="16"
@@ -139,13 +155,13 @@
         <intent android:action="android.settings.SHOW_REGULATORY_INFO"/>
     </Preference>
 
-    <!-- Safety & regulatory manual -->
+    Safety & regulatory manual
     <Preference
         android:key="safety_info"
         android:order="17"
         android:title="@string/safety_and_regulatory_info">
         <intent android:action="android.settings.SHOW_SAFETY_AND_REGULATORY_INFO"/>
-    </Preference>
+    </Preference> -->
 
     <!-- SIM status -->
     <Preference

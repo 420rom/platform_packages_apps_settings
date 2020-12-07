@@ -16,13 +16,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- About phone screen, 420rom version -->
-    <string name="420rom_name">Rom name</string>
-    <string name="420rom_version_default">420rom</string>
-    <string name="420rom_version">420rom version</string>
-    <string name="420rom_version_default">11.0 Pixel Edition</string>
-    <string name="420rom_about_nfo">About 420rom</string>
-    <string name="420rom_about_info_summary_title">about us</string>
-    <string name="420rom_info_summary">420rom AOSP/Pixel based rom.</string>
+    <string name="_420rom_name">Rom name</string>
+    <string name="_420rom_name_default">420rom</string>
+    <string name="_420rom_version">420rom version</string>
+    <string name="_420rom_version_default">11.0 Pixel Edition</string>
+    <string name="_420rom_about">About 420rom</string>
+    <string name="_420rom_about_default">420rom AOSP/Pixel based rom</string>
 
     <!-- About phone screen, AOSP version -->  
     <string name="aosp_version">Rom base</string>
