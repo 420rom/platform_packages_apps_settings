@@ -28,6 +28,11 @@
     <string name="aosp_version_default">11.0.0 Release 21 (RQ1A.201205.008.A1)</string>
     <string name="keywords_aosp_version">AOSP base</string>
 
+    <!-- About phone screen, LOS version -->  
+    <string name="los_version">LOS base</string>
+    <string name="los_version_default">18.1</string>
+    <string name="keywords_los_version">LOS base</string>
+
     <!-- About phone screen, Rom type -->  
     <string name="rom_type">Rom type</string>
     <string name="rom_type_default">ARM64 with Google apps</string>

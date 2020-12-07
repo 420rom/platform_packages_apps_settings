@@ -52,10 +52,18 @@
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"/>
 
+    <!-- LOS version -->
+    <Preference
+        android:key="los_version"
+        android:order="5"
+        android:title="@string/los_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"/>
+
     <!-- Rom type -->
     <Preference
         android:key="rom_type"
-        android:order="5"
+        android:order="6"
         android:title="@string/rom_type"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"/>
@@ -63,7 +71,7 @@
     <!-- Rom devs -->
     <Preference
         android:key="rom_devs"
-        android:order="6"
+        android:order="7"
         android:title="@string/rom_devs"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"/>
@@ -71,7 +79,7 @@
     <!-- About rom -->
     <Preference
         android:key="_420rom_about"
-        android:order="6"
+        android:order="8"
         android:title="@string/_420rom_about"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"/>		
@@ -98,7 +106,7 @@
     <!-- Device name -->
     <com.android.settings.widget.ValidatedEditTextPreference
         android:key="device_name"
-        android:order="1"
+        android:order="54"
         android:title="@string/my_device_info_device_name_preference_title"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
@@ -107,8 +115,8 @@
     <!-- Model & hardware -->
     <Preference
         android:key="device_model"
-        android:order="2"
-        android:title="@string/hardware_info"
+        android:order="55"
+        android:title="@string/model_info"
         settings:keywords="@string/keywords_model_and_hardware"
         android:summary="@string/summary_placeholder"
         android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
@@ -117,7 +125,7 @@
     <!-- Account name -->
     <Preference
         android:key="branded_account"
-        android:order="2"
+        android:order="56"
         android:title="@string/my_device_info_account_preference_title"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.deviceinfo.BrandedAccountPreferenceController"/>
@@ -125,7 +133,7 @@
     <!-- Phone number -->
     <Preference
         android:key="phone_number"
-        android:order="3"
+        android:order="57"
         android:title="@string/status_number"
         android:summary="@string/summary_placeholder"
         android:selectable="false"
@@ -134,7 +142,7 @@
 
     <Preference
         android:key="emergency_info"
-        android:order="14"
+        android:order="58"
         android:title="@string/emergency_info_title"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.accounts.EmergencyInfoPreferenceController"/>
@@ -142,7 +150,7 @@
     <!-- Legal information -->
     <!--Preference
         android:key="legal_container"
-        android:order="15"
+        android:order="59"
         android:title="@string/legal_information"
         android:fragment="com.android.settings.LegalSettings"
         settings:allowDividerAbove="true"/>
@@ -150,7 +158,7 @@
     Regulatory labels
     <Preference
         android:key="regulatory_info"
-        android:order="16"
+        android:order="60"
         android:title="@string/regulatory_labels">
         <intent android:action="android.settings.SHOW_REGULATORY_INFO"/>
     </Preference>
@@ -158,7 +166,7 @@
     Safety & regulatory manual
     <Preference
         android:key="safety_info"
-        android:order="17"
+        android:order="61"
         android:title="@string/safety_and_regulatory_info">
         <intent android:action="android.settings.SHOW_SAFETY_AND_REGULATORY_INFO"/>
     </Preference> -->
@@ -166,7 +174,7 @@
     <!-- SIM status -->
     <Preference
         android:key="sim_status"
-        android:order="18"
+        android:order="62"
         android:title="@string/sim_status_title"
         settings:keywords="@string/keywords_sim_status"
         android:summary="@string/summary_placeholder"
@@ -176,7 +184,7 @@
     <!-- IMEI -->
     <Preference
         android:key="imei_info"
-        android:order="32"
+        android:order="63"
         android:title="@string/status_imei"
         android:summary="@string/summary_placeholder"
         settings:keywords="@string/keywords_imei_info"
@@ -186,7 +194,7 @@
     <!--IP address -->
     <Preference
         android:key="wifi_ip_address"
-        android:order="44"
+        android:order="64"
         android:title="@string/wifi_ip_address"
         android:summary="@string/summary_placeholder"
         android:selectable="false"
@@ -196,7 +204,7 @@
     <!-- Wi-Fi MAC address -->
     <Preference
         android:key="saved_accesspoints_wifi_mac_address"
-        android:order="45"
+        android:order="65"
         android:title="@string/status_wifi_mac_address"
         android:summary="@string/view_saved_network"
         android:fragment="com.android.settings.wifi.savedaccesspoints.SavedAccessPointsWifiSettings"
@@ -205,7 +213,7 @@
     <!-- Factory Wi-Fi MAC address -->
     <Preference
         android:key="wifi_mac_address"
-        android:order="46"
+        android:order="66"
         android:title="@string/status_device_wifi_mac_address"
         android:summary="@string/summary_placeholder"
         android:selectable="false"
@@ -214,7 +222,7 @@
     <!-- Bluetooth address -->
     <Preference
         android:key="bt_address"
-        android:order="47"
+        android:order="67"
         android:title="@string/status_bt_address"
         android:summary="@string/summary_placeholder"
         android:selectable="false"
@@ -223,14 +231,14 @@
     <!-- Device FCC equipment id -->
     <Preference
         android:key="fcc_equipment_id"
-        android:order="52"
+        android:order="68"
         android:title="@string/fcc_equipment_id"
         android:summary="@string/summary_placeholder"/>
 
     <!-- Device up time -->
     <Preference
         android:key="up_time"
-        android:order="47"
+        android:order="69"
         android:title="@string/status_up_time"
         android:summary="@string/summary_placeholder"
         android:selectable="false"/>
@@ -238,6 +246,7 @@
     <!-- SELinux -->
     <Preference
         android:key="selinux_status"
+        android:order="70"
         android:title="@string/selinux_status"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="false"
