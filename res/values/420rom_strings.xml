@@ -25,7 +25,7 @@
 
     <!-- About phone screen, AOSP version -->  
     <string name="aosp_version">Rom base</string>
-    <string name="aosp_version_default">11.0.0 Release 17 (RP1A.201105.002)</string>
+    <string name="aosp_version_default">11.0.0 Release 20 (RQ1A.201205.010)</string>
     <string name="keywords_aosp_version">AOSP base</string>
 
     <!-- About phone screen, Rom type -->  
