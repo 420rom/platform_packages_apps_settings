@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2020 420rom
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.420rom.advsettings.preferences.CategoryPreference
+        android:key="device_extras_category"
+        android:icon="@drawable/420rom_device_extras"
+        android:title="@string/device_extras_title"
+        android:summary="@string/device_extras_summary" >
+        <intent android:action="com.android.settings.action.EXTRA_SETTINGS"
+            android:targetPackage="com.420rom.settings.device"
+            android:targetClass="com.420rom.settings.device.TouchscreenGestureSettings" />
+    </com.420rom.advsettings.preferences.CategoryPreference>
+
+    <com.420rom.advsettings.preferences.CategoryPreference
+        android:key="lockscreen_items_category"
+        android:icon="@drawable/420rom_lockscreen_items"
+        android:title="@string/lockscreen_items_title"
+        android:summary="@string/lockscreen_items_summary"
+        android:fragment="com.420rom.advsettings.fragments.system.LockscreenItems" />
+
+    <com.420rom.advsettings.preferences.CategoryPreference
+        android:key="miscellaneous_category"
+        android:icon="@drawable/420rom_miscellaneous"
+        android:title="@string/miscellaneous_title"
+        android:summary="@string/miscellaneous_summary"
+        android:fragment="com.420rom.advsettings.fragments.system.Miscellaneous" />
+
+    <com.420rom.advsettings.preferences.CategoryPreference
+        android:key="powermenu_category"
+        android:icon="@drawable/420rom_powermenu"
+        android:title="@string/powermenu_title"
+        android:summary="@string/powermenu_summary"
+        android:fragment="com.420rom.advsettings.fragments.system.PowerMenu" />
+
+</PreferenceScreen>

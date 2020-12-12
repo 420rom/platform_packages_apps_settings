@@ -160,6 +160,8 @@ import com.android.settings.wifi.savedaccesspoints.SavedAccessPointsWifiSettings
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
+import com.420rom.advsettings.420romadvsettings;
+
 public class SettingsGateway {
 
     /**
@@ -307,7 +309,8 @@ public class SettingsGateway {
             GestureNavigationSettingsFragment.class.getName(),
             InteractAcrossProfilesSettings.class.getName(),
             InteractAcrossProfilesDetails.class.getName(),
-            MediaControlsSettings.class.getName()
+            MediaControlsSettings.class.getName(),
+            420romadvsettings.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -347,5 +350,7 @@ public class SettingsGateway {
             Settings.MyDeviceInfoActivity.class.getName(),
             Settings.ModuleLicensesActivity.class.getName(),
             UserBackupSettingsActivity.class.getName(),
+            // Home page > 420rom Advanced settings
+            Settings.420romAdvSettingsActivity.class.getName()
     };
 }

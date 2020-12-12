@@ -134,6 +134,14 @@
         android:fragment="com.android.settings.system.SystemDashboardFragment"/>
 
     <Preference
+        android:key="top_level_advsettings"
+        android:title="@string/advsettings_title"
+        android:summary="@string/advsettings_summary"
+        android:icon="@drawable/ic_advsettings"
+        android:order="15"
+        android:fragment="com.420rom.advsettings.420romadvsettings"/>
+
+    <Preference
         android:key="top_level_about_device"
         android:title="@string/about_settings"
         android:summary="@string/summary_placeholder"

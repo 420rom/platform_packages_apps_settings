@@ -37,4 +37,10 @@
 
     <!-- For a menu item allowing users to edit a SIM display name -->
     <item type="id" name="edit_sim_name" />
+
+    <!-- Advanced settings-->
+    <item name="system" type="id" />
+    <item name="statusbar" type="id" />
+    <item name="navigation" type="id" />
+    <item name="multitasking" type="id" />
 </resources>
