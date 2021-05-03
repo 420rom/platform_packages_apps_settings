@@ -18,21 +18,82 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="my_device_info_pref_screen"
     android:title="@string/about_settings">
+    
+    <!-- 420rom logo -->
+    <Preference
+        android:key="logo"
+        android:order="0"
+        android:enabled="false"
+        android:layout="@layout/logo" />
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="device_name"
-        android:order="-1"
+        android:order="1"
         android:selectable="false"
         android:layout="@layout/device_info_header"
         settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
         settings:isPreferenceVisible="false" />
 
+    <!-- 420rom name -->
+    <Preference
+        android:key="420rom_name"
+        android:layout="@layout/dot_preference_top_card"
+        android:order="2"
+        android:title="@string/_420rom_name"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"/>
+
+    <!-- 420rom version -->
+    <Preference
+        android:key="420rom_version"
+        android:layout="@layout/dot_preference_top_card"
+        android:order="3"
+        android:title="@string/_420rom_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"/>
+		
+    <!-- AOSP version -->
+    <Preference
+        android:key="aosp_version"
+        android:layout="@layout/dot_preference_top_card"
+        android:order="4"
+        android:title="@string/aosp_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"/>
+
+    <!-- Rom type -->
+    <Preference
+        android:key="rom_type"
+        android:layout="@layout/dot_preference_top_card"
+        android:order="5"
+        android:title="@string/rom_type"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"/>
+
+    <!-- Rom devs -->
+    <Preference
+        android:key="rom_devs"
+        android:layout="@layout/dot_preference_top_card"
+        android:order="6"
+        android:title="@string/rom_devs"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"/>
+
+    <!-- About rom -->
+    <Preference
+        android:key="420rom_about"
+        android:layout="@layout/dot_preference_top_card"
+        android:order="7"
+        android:title="@string/_420rom_about"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"/>	
+        
     <!-- Android version -->
     <Preference
         android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
         android:key="firmware_version"
         android:layout="@layout/dot_preference_top_card"
-        android:order="0"
+        android:order="8"
         android:summary="@string/summary_placeholder"
         android:title="@string/firmware_version"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController" />
@@ -41,7 +102,7 @@
     <Preference
         android:key="build_number"
         android:layout="@layout/dot_preference_middle_card"
-        android:order="3"
+        android:order="9"
         android:summary="@string/summary_placeholder"
         android:title="@string/build_number"
         settings:allowDividerAbove="true"
@@ -52,67 +113,15 @@
     <Preference
         android:key="branded_account"
         android:layout="@layout/dot_preference_middle_card"
-        android:order="4"
+        android:order="10"
         android:summary="@string/summary_placeholder"
         android:title="@string/my_device_info_account_preference_title"
         settings:controller="com.android.settings.deviceinfo.BrandedAccountPreferenceController" />
 
-    <!-- SELinux status information -->
-    <Preference
-        android:key="selinux_status"
-        android:layout="@layout/dot_preference_bottom_card"
-        android:order="5"
-        android:summary="@string/selinux_status_enforcing"
-        android:title="@string/selinux_status" />
-
     <PreferenceCategory
         android:layout="@layout/dot_preference_category"
-        android:order="6"
-        android:title="@string/dot_about_device_info" />
-
-    <!-- Legal information -->
-    <Preference
-        android:fragment="com.android.settings.LegalSettings"
-        android:key="legal_container"
-        android:layout="@layout/dot_preference_top_card"
-        android:order="7"
-        android:title="@string/legal_information"
-        settings:allowDividerAbove="true" />
-
-    <!-- Regulatory labels -->
-    <Preference
-        android:key="regulatory_info"
-        android:layout="@layout/dot_preference_middle_card"
-        android:order="8"
-        android:title="@string/regulatory_labels">
-        <intent android:action="android.settings.SHOW_REGULATORY_INFO" />
-    </Preference>
-
-    <!-- Safety & regulatory manual -->
-    <Preference
-        android:key="safety_info"
-        android:layout="@layout/dot_preference_middle_card"
-        android:order="9"
-        android:title="@string/safety_and_regulatory_info">
-        <intent android:action="android.settings.SHOW_SAFETY_AND_REGULATORY_INFO" />
-    </Preference>
-
-    <!-- Manual -->
-    <Preference
-        android:key="manual"
-        android:layout="@layout/dot_preference_middle_card"
-        android:order="10"
-        android:title="@string/manual">
-        <intent android:action="android.settings.SHOW_MANUAL" />
-    </Preference>
-
-    <!-- Feedback on the device -->
-    <Preference
-        android:key="device_feedback"
-        android:layout="@layout/dot_preference_middle_card"
         android:order="11"
-        android:title="@string/device_feedback"
-        settings:keywords="@string/keywords_device_feedback" />
+        android:title="@string/dot_about_device_info" />
 
     <!-- SIM status -->
     <Preference
@@ -210,6 +219,14 @@
         android:title="@string/status_bt_address"
         settings:enableCopying="true" />
 
+    <!-- SELinux status information -->
+    <Preference
+        android:key="selinux_status"
+        android:layout="@layout/dot_preference_bottom_card"
+        android:order="98"
+        android:summary="@string/selinux_status_enforcing"
+        android:title="@string/selinux_status" />
+        
     <!-- Device up time -->
     <Preference
         android:key="up_time"
@@ -218,5 +235,5 @@
         android:selectable="false"
         android:summary="@string/summary_placeholder"
         android:title="@string/status_up_time" />
-
+        
 </PreferenceScreen>

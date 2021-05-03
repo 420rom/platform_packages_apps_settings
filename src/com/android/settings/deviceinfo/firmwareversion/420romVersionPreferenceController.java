@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 ArrowOS
+ * Copyright (C) 2019 The SuperiorOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,28 +18,31 @@ package com.android.settings.deviceinfo.firmwareversion;
 
 import android.content.Context;
 import android.os.SystemProperties;
+import android.text.TextUtils;
+
+import androidx.annotation.VisibleForTesting;
 
 import com.android.settings.R;
+import com.android.settings.Utils;
 import com.android.settings.core.BasePreferenceController;
 
-public class AboutDeviceNamePreferenceController extends BasePreferenceController {
+public class 420romVersionPreferenceController extends BasePreferenceController {
 
-    private static final String TAG = "AboutDeviceNameCtrl";
+    @VisibleForTesting
+    static final String FOUR20ROM_VERSION_PROPERTY = "ro.420rom.display.version";
 
-    private static final String KEY_DEVICE_NAME_PROP = "ro.420rom.device";
-
-    public AboutDeviceNamePreferenceController(Context context, String key) {
-        super(context, key);
+    public 420romVersionPreferenceController(Context context, String preferenceKey) {
+        super(context, preferenceKey);
     }
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        return !TextUtils.isEmpty(SystemProperties.get(FOUR20ROM_VERSION_PROPERTY)) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 
     @Override
     public CharSequence getSummary() {
-        return SystemProperties.get(KEY_DEVICE_NAME_PROP,
-                mContext.getString(R.string.unknown));
+        return SystemProperties.get(FOUR20ROM_VERSION_PROPERTY,
+                mContext.getString(R.string.device_info_default));
     }
 }
