@@ -29,7 +29,7 @@
 
     <!-- About phone screen, AOSP version -->  
     <string name="aosp_version">Rom base</string>
-    <string name="aosp_version_default">11.0.0 Release 35 (RQ2A.210405.006)</string>
+    <string name="aosp_version_default">11.0.0 Release 37 (RQ2A.210505.003)</string>
     <string name="keywords_aosp_version">AOSP base</string>
 
     <!-- About phone screen, Rom type -->  
